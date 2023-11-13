@@ -45,9 +45,11 @@ export default function Success({ navigation }) {
                         <Image source={{ uri: item.img }} style={styles.img} />
                         <View style={{ marginLeft: 20, width: 100 }}>
                             <Text style={styles.nameDrink}>{item.name}</Text>
-                            <Text>
+                            <Text style={{marginBottom:5}}>
                                 <Feather name="play-circle" size={20} color="black" style={{ marginRight: 5 }} />
-                                {item.price} $</Text>
+                                {item.price} $
+                            </Text>
+                            <Text>Quantity: {item.quantity}</Text>
                         </View>
                         <View style={{ marginLeft: 20, justifyContent: 'space-around', flexDirection: 'row' }}>
                             <TouchableOpacity style={styles.modifyQuatityButton}
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
         height: 70,
     },
     nameDrink: {
-        marginBottom: 20,
+        marginBottom: 5,
         fontSize: 18,
         fontWeight: '500',
         lineHeight: 26,
